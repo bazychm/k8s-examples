@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-external
+spec:
+  selector:
+    name: nginx-simple
+  type: LoadBalancer
+  ports:
+  - name:  nginx-simple
+    port:  80
+    targetPort:  80
